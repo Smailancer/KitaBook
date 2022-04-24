@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookStore</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'jquery.raty.js', "data-turbolinks-track" => false %>
+  </head>
+
+  <body>
+    <%= render 'layouts/navbar' %>
+    
+    <% if notice %>
+      <p class="notice alert alert-info"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+     <%= render 'layouts/footer' %>
+  </body>
+</html>

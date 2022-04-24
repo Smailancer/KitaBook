@@ -1,0 +1,23 @@
+<% if params[:category]  %>
+    <h2> <%= params[:category] %> </h2>
+<% else %>
+    <h2><%= t('all_books')%></h2>
+<% end %>
+
+
+<% if @books.size == 0 %>
+    <h1> لا توجد كتب في هذا الصنف حاليا</h1>
+<% else %>
+
+
+<div class="row">
+    <h6> النتيجة : <%= @books.size %> كتب </h6>
+    <% @books.each do |book| %>
+        <div class="col-md-3 background-box">
+            
+            <%= link_to image_tag(book.book_img.url(:book_index)), book_path(book), class: "book" %>
+        <%# <%= link_to book.title, book_path(book) %>  
+        </div>
+    <% end %>
+</div>
+<% end %>

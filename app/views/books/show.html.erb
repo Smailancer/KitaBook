@@ -1,0 +1,88 @@
+<div class="row">
+    <div class="col-md-4 background-box">
+        
+        <%= link_to image_tag(@book.book_img.url(:book_show)), book_path(@book), class: "book-show" %>
+       
+    </div>
+    <div class="col-md-7 background-box ">
+        <h1> <%= @book.title %> </h1>
+        <h4>الكاتب : <%= @book.author %> </h4>
+        <hr>
+        <h5><%= t('average_rating')%></h5>
+        <div class="average-review-rating" data-score=<%= @average_review %> ></div>
+        <h6> متوسط : <%= @book.reviews.size %> تصويتات </h6>
+        <hr>
+        <h4><%= t('description')%> :</h4>
+        <p> <%= @book.description %> </p>
+        <hr>
+        <div> <%= @book.category.name %> | ISBN : <%= @book.isbn %> </div>
+        <br>
+          <!-- Edit and Delete Books Buttons !-->
+
+        <div class="links btn-group">
+          <% if user_signed_in? %>
+              <% if @book.user_id == current_user.id %>
+
+                  <%= link_to t('edit_book'), edit_book_path(@book), class: "btn btn-info" %>
+                  <%= link_to t('delete_book'), book_path(@book), method: :delete, data: { confirm: "Are you sure"}, class: "btn btn-danger"  %>
+
+              <% end %>
+          <% end %>
+          </div>
+          
+          <!-- Edit and Delete Books Buttons !-->
+
+    </div>
+</div>
+
+          <!-- Reveiws goes here so I dont forget -->
+
+          
+<div class="row">
+    <div class="col-md-4 background-box text-center">
+        
+        <h1><%= t('reviews')%> :</h1>
+        <% if @book.reviews.size == 0 %>
+            <h4 class="comment"> كن أول من يكتب مراجعة </h4>
+            <%= link_to 'Add Reviews', new_book_review_path(@book), :class => "btn btn-success" %>
+        <% else %>
+            <%= render @book.reviews %>
+            <%= link_to t('add_review'), new_book_review_path(@book), :class => "btn btn-success" %>
+        <% end %>
+    </div>
+
+    <div class="col-md-7 background-box">
+       <h3><%=t('your_copy') %> </h3>
+        <p> بسعر : <%= @book.price %> $ </p>
+        <hr>
+            <!-- PayPal Check out !-->
+          
+              <%= render 'payment' %>
+            
+            <!-- PayPal Check out-->
+    </div>
+</div>
+
+
+
+<script>
+    $('.review-rating').raty({
+        readOnly: true,
+        half: true,
+        score: function() {
+        return $(this).attr('data-score');
+        },
+        path: '/assets/'
+    });
+
+</script>
+
+<script>
+    $('.average-review-rating').raty({
+        readOnly: true,
+        score: function() {
+        return $(this).attr('data-score');
+        },
+        path: '/assets/'
+    });
+</script>

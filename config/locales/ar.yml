@@ -1,0 +1,20 @@
+ar: 
+  sign_in: 'تسجيل الدخول'
+  sign_up: 'تسجيل مستخدم جديد'
+  sign_out: 'تسجيل الخروج'
+  update: 'تحديث'
+  forgot_password: 'نسيت كلمة المرور'
+  book_store: "متجر كتب"
+  new_book: "كتاب جديد"
+  categories: "الأصناف"
+  all_books: "جميع الكتب"
+  average_rating: "معدل التصويت"
+  description: "الوصف"
+  edit_book: "تعديل كتاب"
+  delete_book: "حذف كتاب"
+  reviews: "مراجعات"
+  your_copy: "أحصل على نسختك  "
+  add_review: "أضف مراجعة"
+  author: "المؤلف"
+  book_title: "عنوان الكتاب"
+  price: "السعر"
