@@ -1,24 +1,67 @@
-# README
+# متجر الكتب KitaBook
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+متجر كتب بسيط كمشروع تخرج وتطبيق للمعارف التي تم التطرق إليها في الدورة يحتوي على صفحة رئيسية وصفحة خاصة بكل كتاب بإمكان المستخدم إضافة كتب أو كتابة مراجعات وإضافة تقييمات للكتاب ، كل كتاب لديه متوسط عدد التقييمات بناءا على عدد التقيمات التي تم إضافتها بالإضافة لكل من عنوان الكتاب ، إسم المؤلف ، وصف الكتاب ، رمز ISBN ، و أخيرا سعر الكتاب   .
+بإمكان الزائر إقتناء الكتاب المرغوب عبر زر الباي بال أو استعمال أحد بطاقات الدفع الالكترونية.
 
-Things you may want to cover:
+>  التطبيق عبارة عن إطار عمل بسيط لمتجر بشكل عام لذالك بإمكانك إستعماله لعرض أي نوع من السلع وبيعها 
 
-* Ruby version
 
-* System dependencies
+**الصفحة الرئيسية**
 
-* Configuration
+![صفحة العرض الرئيسية](https://zaetoon.hsoubcdn.com/helpdesk/7/attachments/249635/Capture%20dcran%202022-04-24%20152228.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXNSIF7TBA5EL3S4V%2F20220428%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20220428T112725Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Signature=eb05d266156e35102939299176a5baeeb5a01fddbb2da7ccb599da08187d6c85)
 
-* Database creation
+**صفحة العرض الخاصة بكل كتاب**
+![صفحة العرض الخاصة بالكتاب ](https://zaetoon.hsoubcdn.com/helpdesk/7/attachments/249636/Capture%20dcran%202022-04-24%20152620.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXNSIF7TBA5EL3S4V%2F20220428%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20220428T112734Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Signature=44715d245b68fda7f4d1ba0225bb22b8e6f961de16d5f271365aea05cd694e45)
 
-* Database initialization
 
-* How to run the test suite
+## Gems : المستعملة في المشروع 
 
-* Services (job queues, cache servers, search engines, etc.)
+- simple_form
+- devise
+- bootstrap-sass
+- jquery-rails
+- paperclip
+- Rating system from https://www.wbotelhos.com/raty
 
-* Deployment instructions
 
-* ...
+## نسخة روبي وريلز المستعملة :
+- `Ruby 2.7.5`
+- `Rails 5.2.7`
+
+
+## طريقة التشغيل :
+- قم بعمل استنساخ Clone للمشروع على حاسوبك باستخدام الأمر :
+```bash
+git clone git@github.com:smaily1/kitabook.git
+```
+-  قم بالدخول لمجلد المشروع باستعمال الأمر `cd bookstore` بعدها ولتنصيب الـ Gems الموجودة بالمشروع قم بتشغيل الأمر :
+ 
+```bash
+bundle install
+``` 
+- ثم مرحلة التهجير وبناء الجداول في قاعدة البيانات قم بتشغيل الأمر :
+```bash
+rails db:migrate
+```  
+
+- هذه المرحلة اختيارية بإمكانك تشغيل الخادم مباشرة أو القيام بعمل Seed أو زرع لبعض أمثلة الأصناف والكتب التي أضفتها في التطبيق كي لايظهر لديك بشكل فارغ وذلك عبر تشغيل الأمر :
+```bash
+rails db:seed 
+``` 
+ثم عليك تعديلها بعد ذلك وإضافة غلافات الكتب .
+- أخيرا لتشغيل التطبيق قم بكتابة الأمر  :  
+```bash
+rails server 
+``` 
+بعدها ستجد أن التطبيق يعمل لديك على الرابط `http://localhost:3000`
+
+## ملاحظات :
+ حاليا أواجه هذه المشاكل لذا سأسعد بإضفة اي اقتراحات يتم إرسالها عبر Pull Request :
+ 
+- أود إضافة خاصية Shoping Cart بحيث تسمح بإضافة أكثر من منتج إلى السلة و طلب صفحة الشراء مرة واحدة مع إمكانية شراء أكثر من نسخة لنفس المنتج. 
+- أود إرسال رسالة نجاح عملية الشراء للمستخدم بعد إتمام عملية الشراء. 
+- لازلت أحاول إيجاد حل لربط التطبيق بطرف الثالث من أجل رفع صور أغلفة الكتب عليه كون النسخة المجانية من Heroku لاتسمح بذلك.
+
+
+#### أية اقتراحات أخرى سأكون سعيد بإضافتها للتطبيق شكرا .
+
