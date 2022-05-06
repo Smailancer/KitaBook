@@ -1,0 +1,9 @@
+<%= simple_form_for @category do |f|  %>
+  
+    <%= f.input :name, label: t('category_name') %>
+    <%= f.input :description, label: t('description') %>
+
+    <hr>
+    <%= f.button :submit,t('new_category') , class: 'btn btn-success' %>
+
+<% end %>

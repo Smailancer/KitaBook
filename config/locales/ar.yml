@@ -18,3 +18,5 @@ ar:
   author: "المؤلف"
   book_title: "عنوان الكتاب"
   price: "السعر"
+  new_category: 'صنف جديد'
+  category_name: 'إسم الصنف'
