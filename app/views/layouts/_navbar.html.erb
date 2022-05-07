@@ -17,7 +17,8 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" > <%= t('categories') %> <span class="caret"></span> </a>
                 <ul class="dropdown-menu" role="menu">
-                    <li> <%= link_to t('new_category'), new_category_path %> </li>
+                    <li>  <%= link_to t('new_category') , new_category_path %> </li>
+                    <hr>
                     <% Category.all.each do |category| %>
                         <li class="<%= 'active' if params[:category] == category.name %> " >
                             <%= link_to category.name, books_path(category: category.name), class: "link" %>

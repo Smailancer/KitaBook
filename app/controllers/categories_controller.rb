@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
     before_action :authenticate_user!
 
     def new
-        @category = Category.create(category_params)
+        @category = Category.new
     end
 
     def create

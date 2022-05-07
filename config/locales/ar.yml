@@ -20,3 +20,11 @@ ar:
   price: "السعر"
   new_category: 'صنف جديد'
   category_name: 'إسم الصنف'
+
+  activerecord:
+    errors:
+      models:
+        category:
+          attributes:
+            name:
+              taken: "إسم الصنف موجود"
