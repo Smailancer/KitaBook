@@ -34,7 +34,7 @@ Book.create!([{
     
     isbn: 453634,
     price: 20,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "القوانين اليومية",
@@ -44,7 +44,7 @@ Book.create!([{
     
     isbn: 65334,
     price: 150,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "33 إستراتيجية للحرب",
@@ -54,7 +54,7 @@ Book.create!([{
     
     isbn: 232634,
     price: 30,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "تعلم جافاسكربت",
@@ -64,7 +64,7 @@ Book.create!([{
     
     isbn: 234514,
     price: 200,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "تعلم DOM",
@@ -74,7 +74,7 @@ Book.create!([{
     
     isbn: 211134,
     price: 50,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "مدخل إلى تجربة المستخدم",
@@ -84,7 +84,7 @@ Book.create!([{
     
     isbn: 1111634,
     price: 34,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "الشفرة الكاملة ",
@@ -94,7 +94,7 @@ Book.create!([{
     
     isbn: 153216004,
     price: 60,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "راسبيري باي ببساطة",
@@ -104,7 +104,7 @@ Book.create!([{
     
     isbn: 324634,
     price: 59,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "تعلم البرمجة بلغة PHP",
@@ -114,7 +114,7 @@ Book.create!([{
     
     isbn: 1111634,
     price: 30,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "حكاية ويكيبيديا ",
@@ -124,7 +124,7 @@ Book.create!([{
     
     isbn: 666634,
     price: 20,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "تعرف على البرمجيات الحرة ",
@@ -134,7 +134,7 @@ Book.create!([{
     
     isbn: 1111634,
     price: 45,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "دليل إدارة خوادم أوبونتو ",
@@ -144,7 +144,7 @@ Book.create!([{
     
     isbn: 1111634,
     price: 45,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "الاتقان",
@@ -154,7 +154,7 @@ Book.create!([{
     
     isbn: 34634,
     price: 89,
-    user_id: user.first
+    user_id: User.first
   },
   {
     title: "القانون الخمسون",
@@ -162,9 +162,9 @@ Book.create!([{
     author: "روبرت غرين",
     category_id: 1,
     
-    isbn: 04932,
+    isbn: 4932,
     price: 20,
-    user_id: user.first
+    user_id: User.first
   }])
 
   puts 'Items created'
