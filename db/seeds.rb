@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -34,7 +35,7 @@ Book.create!([{
     
     isbn: 453634,
     price: 20,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "القوانين اليومية",
@@ -44,7 +45,7 @@ Book.create!([{
     
     isbn: 65334,
     price: 150,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "33 إستراتيجية للحرب",
@@ -54,7 +55,7 @@ Book.create!([{
     
     isbn: 232634,
     price: 30,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "تعلم جافاسكربت",
@@ -64,7 +65,7 @@ Book.create!([{
     
     isbn: 234514,
     price: 200,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "تعلم DOM",
@@ -74,7 +75,7 @@ Book.create!([{
     
     isbn: 211134,
     price: 50,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "مدخل إلى تجربة المستخدم",
@@ -84,7 +85,7 @@ Book.create!([{
     
     isbn: 1111634,
     price: 34,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "الشفرة الكاملة ",
@@ -94,7 +95,7 @@ Book.create!([{
     
     isbn: 153216004,
     price: 60,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "راسبيري باي ببساطة",
@@ -104,7 +105,7 @@ Book.create!([{
     
     isbn: 324634,
     price: 59,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "تعلم البرمجة بلغة PHP",
@@ -114,7 +115,7 @@ Book.create!([{
     
     isbn: 1111634,
     price: 30,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "حكاية ويكيبيديا ",
@@ -124,7 +125,7 @@ Book.create!([{
     
     isbn: 666634,
     price: 20,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "تعرف على البرمجيات الحرة ",
@@ -134,7 +135,7 @@ Book.create!([{
     
     isbn: 1111634,
     price: 45,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "دليل إدارة خوادم أوبونتو ",
@@ -144,7 +145,7 @@ Book.create!([{
     
     isbn: 1111634,
     price: 45,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "الاتقان",
@@ -154,7 +155,7 @@ Book.create!([{
     
     isbn: 34634,
     price: 89,
-    user_id: User.first
+    user_id: 1
   },
   {
     title: "القانون الخمسون",
@@ -164,7 +165,7 @@ Book.create!([{
     
     isbn: 4932,
     price: 20,
-    user_id: User.first
+    user_id: 1
   }])
 
   puts 'Items created'
