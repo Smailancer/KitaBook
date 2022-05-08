@@ -56,9 +56,9 @@ rails db:seed
 - ثم عليك الدخول بحساب المدير لتعديلها بعد ذلك وإضافة غلافات الكتب .
 
 > معلومات الدخول لحساب المدير الافتراضي هي : 
->   username: "Admin",
->   email: "admin@bookstore.com",
->   password: "azerty",
+> -  username: "Admin",
+> - email: "admin@bookstore.com",
+> - password: "azerty",
 
 - أخيرا لتشغيل التطبيق قم بكتابة الأمر :
 ````bash
