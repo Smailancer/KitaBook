@@ -4,10 +4,10 @@
     <%= f.input :title, label: t('book_title') %>
     <%= f.input :description, label: t('description') %>
     <%= f.input :author, label: t('author') %>
-    <%= f.input :isbn, label: "ISBN"  %>
+    <%= f.input :isbn, label: "رمز ISBN "  %>
     <%= f.input :price, label: t('price') %>
-    <%= f.input :book_img, as: :file %>
-    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category", label: "Category"  ) %>
+    <%= f.input :book_img, as: :file %> 
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => t('select_category') , label: "category"  ) %>
     <hr>
     <%= f.button :submit,t('new_book') , class: 'btn btn-success' %>
 

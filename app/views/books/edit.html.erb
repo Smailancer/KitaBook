@@ -2,14 +2,17 @@
         <h1> <%= t('edit_book')%> </h1>
         <hr>
         <%= simple_form_for @book, :html => {:multipart => true} do |f|  %>
-        <%= f.select :category_id, @categories %>
+        <%= f.input :title, label: t('book_title') %>
+        <%= f.input :description, label: t('description') %>
+        <%= f.input :author, label: t('author') %>
+        <%= f.input :isbn, label: "رمز ISBN "  %>
+        <%= f.input :price, label: t('price') %>
         <%= f.input :book_img, as: :file %>
-        <%= f.input :title, label: "Book Title" %>
-        <%= f.input :description %>
-        <%= f.input :author %>
-        <%= f.input :price %>
-        <%= f.input :isbn, label: "ISBN"  %>
-        <%= f.button :submit, class: "btn btn-success", label: t('new_book')  %>
+        <%= f.select :category_id, @categories,label: t('category') %>
+        <hr>
+        <%= f.button :submit,t('edit_book') , class: 'btn btn-success' %>
 
     <% end %>
 </div>
+
+

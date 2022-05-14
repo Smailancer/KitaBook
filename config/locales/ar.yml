@@ -24,7 +24,7 @@ ar:
   all_books: "جميع الكتب"
   average_rating: "معدل التصويت"
   description: "الوصف"
-  edit_book: "تعديل كتاب"
+  edit_book: "تعديل الكتاب"
   delete_book: "حذف كتاب"
   reviews: "مراجعات"
   your_copy: "أحصل على نسختك  "
@@ -34,6 +34,9 @@ ar:
   price: "السعر"
   new_category: 'صنف جديد'
   category_name: 'إسم الصنف'
+  select_category: "اختر صنفا"
+  category: "صنف"
+
 
   date:
     abbr_day_names:
